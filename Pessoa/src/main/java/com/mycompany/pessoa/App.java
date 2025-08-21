@@ -4,27 +4,42 @@
  */
 package com.mycompany.pessoa;
 
+/**
+ *
+ * @author mathillesheim
+ */
 public class App {
+    
     public static void main(String[] args) {
-        // Criando 3 pessoas
-        Pessoa p1 = new Pessoa("Maria", 20, 1.65);
-        Pessoa p2 = new Pessoa("João", 17, 1.80);
-        Pessoa p3 = new Pessoa("Ana", 30, 1.70);
-
-        // Chamando apresentar()
+        
+        
+        Pessoa p1 = new Pessoa();
+    
+        p1.setNome("Maria");
+        p1.setIdade(22);
+        p1.setAltura(1.50);
+    
+        Pessoa p2 = new Pessoa();
+        p2.setNome("João");
+        p2.setIdade(23);
+        p2.setAltura(1.60);
+        
+        Pessoa p3 = new Pessoa();
+        p3.setNome("Dudu");
+        p3.setIdade(26);
+        p3.setAltura(1.45);
+    
         p1.apresentar();
         p2.apresentar();
         p3.apresentar();
-
-        // Chamando calcularIdadeEm()
-        System.out.println("Maria terá " + p1.calcularIdadeEm(2030) + " anos em 2030.");
-        System.out.println("João terá " + p2.calcularIdadeEm(2030) + " anos em 2030.");
-        System.out.println("Ana terá " + p3.calcularIdadeEm(2030) + " anos em 2030.");
-
-        // Chamando ehMaiorIdade()
-        System.out.println("Maria é maior de idade? " + p1.ehMaiorIdade());
-        System.out.println("João é maior de idade? " + p2.ehMaiorIdade());
-        System.out.println("Ana é maior de idade? " + p3.ehMaiorIdade());
+    
+        System.out.println(p1.getNome() + " tera " + p1.calcularIdade(30) + " anos daqui a 30 anos.");
+        System.out.println(p2.getNome() + " tera " + p2.calcularIdade(30) + " anos daqui a 30 anos.");
+        System.out.println(p3.getNome() + " tera " + p3.calcularIdade(30) + " anos daqui a 30 anos.");
+        
+        System.out.println(p1.getNome() + " é maior de idade? " + p1.maiorIdade());
+        System.out.println(p2.getNome() + " é maior de idade? " + p2.maiorIdade());
+        System.out.println(p3.getNome() + " é maior de idade? " + p3.maiorIdade());
+    
     }
 }
-

@@ -4,33 +4,52 @@
 
 package com.mycompany.pessoa;
 
+/**
+ *
+ * @author mathillesheim
+ */
 public class Pessoa {
-    // Atributos
+
     private String nome;
     private int idade;
     private double altura;
 
-    // Construtor
-    public Pessoa(String nome, int idade, double altura) {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
         this.altura = altura;
     }
-
-    // Método apresentar()
+    
     public void apresentar() {
-        System.out.println("Olá, eu sou " + nome + ", tenho " + idade + " anos e " + altura + "m de altura.");
+        System.out.println("Me chamo " + nome + " , tenho " + idade + " anos, e tenho " + altura + " de altura");
+        
+    }
+   
+    public int calcularIdade(int idade) {
+        return this.idade + 30; 
     }
 
-    // Método calcularIdadeEm()
-    public int calcularIdadeEm(int ano) {
-        int anoAtual = java.time.Year.now().getValue();
-        return idade + (ano - anoAtual);
-    }
-
-    // Método ehMaiorIdade()
-    public boolean ehMaiorIdade() {
+    
+    public boolean maiorIdade() {
         return idade >= 18;
     }
+    
 }
-
